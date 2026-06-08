@@ -1,0 +1,7 @@
+2026-06-08 14:39:47.223913 | admin | 1234 | FAIL
+2026-06-08 14:39:48.229311 | admin | admin | FAIL
+2026-06-08 14:39:49.234212 | admin | test | FAIL
+2026-06-08 14:39:50.238656 | admin | password | FAIL
+2026-06-08 14:39:51.244457 | admin | letmein | FAIL
+2026-06-08 14:39:52.256167 | admin | archanaachu | FAIL
+2026-06-08 14:39:53.263116 | admin | password123 | SUCCESS

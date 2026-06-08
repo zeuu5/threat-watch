@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>ThreatWatch Comment</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Comment Page</h1>
+        <form method="post">
+            <label>Comment</label>
+            <input name="comment" placeholder="Enter comment" required />
+            <button type="submit">Submit</button>
+        </form>
+        {% if message %}
+            <div class="message">{{ message }}</div>
+        {% endif %}
+        <nav>
+            <a href="/">Login</a>
+            <a href="/logs">Dashboard</a>
+        </nav>
+    </div>
+</body>
+</html>

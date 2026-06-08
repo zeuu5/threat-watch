@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>ThreatWatch Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>ThreatWatch Dashboard</h1>
+        <section class="metrics">
+            <div>Total Requests: {{ total }}</div>
+            <div>Brute Force: {{ fails }}</div>
+            <div>SQL Injection: {{ sqli }}</div>
+            <div>XSS: {{ xss }}</div>
+        </section>
+        <section class="chart-card">
+            <h2>Attack Trend</h2>
+            <canvas id="attackChart" data-attack-counts='{{ attack_counts | tojson }}'></canvas>
+        </section>
+        <section class="alerts">
+            <h2>Alerts</h2>
+            {% for alert in alerts %}
+                <p>{{ alert }}</p>
+            {% endfor %}
+        </section>
+
+        <section class="logs">
+            <h2>Latest Logs</h2>
+            {% for log in logs %}
+                <pre>{{ log }}</pre>
+            {% endfor %}
+        </section>
+
+        <nav>
+            <a href="/">Login</a>
+            <a href="/comment">Comment</a>
+        </nav>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
